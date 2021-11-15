@@ -168,7 +168,7 @@ export const TableView = ({
         ) : null}
         <EuiSpacer size="s" />
         <EuiDataGrid
-          width={1080}
+          width={1200}
           height={480}
           columns={[{ id: '', actions: false }, ...columns]}
           columnVisibility={{
