@@ -17,7 +17,7 @@ All modules mentioned are used in `radar-visualizer` and `line-visualizer`:
 
 ## Installation (graph plugins)
 
-- First, download the plugin's .zip file for your version of Kibana (see: [Releases](https://github.com/traeok/kibana-enhanced-vis/releases)).
+- First, download the plugin's .zip file for your version of Kibana (see: [Releases](https://github.com/ctc-oss/kibana-vis/releases)).
 - Next, extract the .zip file into the plugins folder of your Kibana server (`<KIBANA_FOLDER>/plugins`).
 - Then, start your Kibana server.
 - Done!
