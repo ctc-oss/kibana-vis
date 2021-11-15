@@ -1,0 +1,7 @@
+{
+  "prefix": "lineVisualizer",
+  "paths": {
+    "lineVisualizer": "."
+  },
+  "translations": ["translations/ja-JP.json"]
+}

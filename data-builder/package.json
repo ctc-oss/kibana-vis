@@ -1,0 +1,13 @@
+{
+  "name": "@kibana-enhanced-vis/data-builder",
+  "description": "A data builder for Kibana visualizations",
+  "author": "Trae Yelovich <yelovict@ctc.com>",
+  "version": "1.0.0",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "tsc": "tsc --project tsconfig.json"
+  }
+}

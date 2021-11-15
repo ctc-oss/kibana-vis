@@ -1,0 +1,12 @@
+{
+  "name": "@kibana-enhanced-vis/drilldown",
+  "version": "1.0.0",
+  "description": "Drilldown helper functions to compose drilldown visualization URLs",
+  "author": "Trae Yelovich <yelovict@ctc.com>",
+  "scripts": {
+    "tsc": "tsc --project tsconfig.json"
+  },
+  "dependencies": {
+    "color-string": "^1.6.0"
+  }
+}

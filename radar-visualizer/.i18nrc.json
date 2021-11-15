@@ -1,0 +1,7 @@
+{
+  "prefix": "radarVisualizer",
+  "paths": {
+    "radarVisualizer": "."
+  },
+  "translations": ["translations/ja-JP.json"]
+}

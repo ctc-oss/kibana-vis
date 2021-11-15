@@ -1,0 +1,14 @@
+{
+  "name": "@kibana-enhanced-vis/legend",
+  "description": "A React legend component for visualizations, built with SVG. Designed to be both modular and portable.",
+  "author": "Trae Yelovich <yelovict@ctc.com>",
+  "version": "1.0.0",
+  "dependencies": {
+    "react": "^16.12.0",
+    "styled-components": "^5.1.0",
+    "typescript": "^4.4.3"
+  },
+  "scripts": {
+    "tsc": "tsc --project tsconfig.json"
+  }
+}
