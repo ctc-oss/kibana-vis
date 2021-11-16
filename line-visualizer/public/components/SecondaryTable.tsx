@@ -1,4 +1,6 @@
 import React from 'react';
+import { uniq } from 'lodash';
+
 import { EuiButtonEmpty, EuiDataGrid, EuiSpacer, EuiText } from '@elastic/eui';
 import { formattedNumber } from '../defines/line';
 import { LayerIcon } from './TableView';
@@ -80,7 +82,7 @@ export const SecondaryTableView = ({
         pagination={{
           ...pagination,
           // Math.min(queryKeys[i].length, queryKeys[currentLayer].length)
-          pageSizeOptions: [5, 10, 25, 50, data.length].sort((a, b) => a - b),
+          pageSizeOptions: uniq([5, 10, 25, 50, data.length].sort((a, b) => a - b)),
           onChangeItemsPerPage: setPageSize,
           onChangePage: setPageIndex,
         }}
