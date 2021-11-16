@@ -1,13 +1,12 @@
-# `kibana-enhanced-vis`
+<h1 align="center"><pre>kibana-enhanced-vis</pre></h1>
+<p align="center">Kibana visualization plugins & helper modules.</p>
 
-Kibana visualization plugins & helper modules.
-
-## Graph Plugins
+### Graph Plugins
 
 - **`radar-visualizer:`** Plot multivariate data using a radar chart.
 - **`line-visualizer:`** Plot data using a line chart - supports stacked lines.
 
-## Modules
+### Modules
 
 All modules mentioned are used in `radar-visualizer` and `line-visualizer`:
 
@@ -15,7 +14,7 @@ All modules mentioned are used in `radar-visualizer` and `line-visualizer`:
 - **`legend:`** Customizable legend component made in React.
 - **`data-builder:`** Fetches and formats data, given Datatable object from a Kibana plugin.
 
-## Installation (graph plugins)
+### Installation (graph plugins)
 
 - Follow the instructions for your Kibana version under [Releases](https://github.com/ctc-oss/kibana-vis/releases).
 
