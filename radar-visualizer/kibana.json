@@ -1,5 +1,5 @@
 {
-  "id": "radarVisualizer",
+  "id": "radar-visualizer",
   "version": "1.0.0",
   "kibanaVersion": "7.15.0",
   "server": false,
