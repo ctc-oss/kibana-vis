@@ -1,7 +1,5 @@
 # `data-builder`
 
-## Description
-
 **data-builder** is a simple library that helps to query and format data for use with Kibana plugins.
 
 ## Usage

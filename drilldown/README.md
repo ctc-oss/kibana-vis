@@ -1,7 +1,5 @@
 # `drilldown`
 
-## Description
-
 Tools used in `radar-visualizer` and `line-visualizer` to generate drilldown data to present within their components.
 
 ## Usage

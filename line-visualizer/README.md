@@ -1,7 +1,5 @@
 # `line-visualizer`
 
-## Description
-
 A React visualization for Kibana - plots data using a line chart.
 Supports multiple categories/buckets and stacked lines.
 

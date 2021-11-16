@@ -1,7 +1,5 @@
 # `legend`
 
-## Description
-
 **legend** is a flexible legend created in React. Toggle layers by passing a click handler, if desired. The legend has minimal but modern hover styling, with strike-through text for hidden layers. Hide all/show all button is included at the top, which runs the click handler for all of the layers at once.
 
 The legend should be stored in the state of another React component in order to access the status of the layers within it.

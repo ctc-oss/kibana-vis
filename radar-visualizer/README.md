@@ -1,7 +1,5 @@
 # `radar-visualizer`
 
-## Description
-
 A React visualization for Kibana - plots data using a Radar chart.
 **3** or more metrics are required for data to be accurately visualized.
 
