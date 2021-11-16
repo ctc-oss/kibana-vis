@@ -1,9 +1,18 @@
 {
   "id": "radarVisualizer",
   "version": "1.0.0",
-  "kibanaVersion": "kibana",
+  "kibanaVersion": "7.15.0",
   "server": false,
   "ui": true,
-  "requiredPlugins": ["charts", "expressions", "data", "kibanaUtils", "inspector", "navigation", "visualizations", "visDefaultEditor"],
+  "requiredPlugins": [
+    "charts",
+    "expressions",
+    "data",
+    "kibanaUtils",
+    "inspector",
+    "navigation",
+    "visualizations",
+    "visDefaultEditor"
+  ],
   "optionalPlugins": []
 }
