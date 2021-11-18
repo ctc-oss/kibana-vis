@@ -11,9 +11,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Compile Plugins
+      - name: Compile
         run: cd line-visualizer/ && yarn && cd ../radar-visualizer/ && yarn
-      - name: ZIP Plugins
+      - name: Compress
         run: |
           mkdir kibana && cp -R line-visualizer/ kibana/ && zip -r line-visualizer-7.15.0.zip kibana/
           rm -r kibana/* && cp -R radar-visualizer/ kibana/ && zip -r radar-visualizer-7.15.0.zip kibana/
