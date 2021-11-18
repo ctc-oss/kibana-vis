@@ -1,4 +1,4 @@
-name: Vis Plugin Builder
+name: Build & Release Plugins
 
 on:
   push:
