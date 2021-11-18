@@ -11,13 +11,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Compile TypeScript
-        run: |
-          yarn global add typescript
-          cd data-builder/ && tsc --project tsconfig.json
-          cd ../drilldown/ && tsc --project tsconfig.json
-          cd ../legend/ && tsc --project tsconfig.json
-      - name: Fetch Plugin Dependencies
+      - name: Compile
         run: cd line-visualizer/ && yarn && cd ../radar-visualizer/ && yarn
       - name: Compress
         run: |
