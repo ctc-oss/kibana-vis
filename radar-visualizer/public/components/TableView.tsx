@@ -226,7 +226,7 @@ export const TableView = ({
               </>
             );
           }}
-          pagination={{
+          pagination={keyList.length < 10 ? null : {
             ...pagination,
             pageSizeOptions: [5, 10, 25, 50, 100],
             onChangeItemsPerPage: setPageSize,
