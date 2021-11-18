@@ -11,11 +11,12 @@ jobs:
       - name: Compile Plugins
         run: cd line-visualizer/ && yarn && cd ../radar-visualizer/ && yarn
       - name: ZIP Plugins
-        run: mkdir kibana && cp -R line-visualizer/ kibana/ && zip -r line-visualizer-7.15.0.zip kibana/
-        run: rm -r kibana/* && cp -R radar-visualizer/ kibana/ && zip -r radar-visualizer-7.15.0.zip kibana/
+        run: |
+          mkdir kibana && cp -R line-visualizer/ kibana/ && zip -r line-visualizer-7.15.0.zip kibana/
+          rm -r kibana/* && cp -R radar-visualizer/ kibana/ && zip -r radar-visualizer-7.15.0.zip kibana/
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: | 
+          files: |
             line-visualizer-7.15.0.zip
             radar-visualizer-7.15.0.zip
