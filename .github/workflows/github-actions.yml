@@ -1,4 +1,4 @@
-name: Compile
+name: Vis Plugin Builder
 
 on:
   push:
@@ -19,6 +19,6 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          files: |
-          line-visualizer-7.15.0.zip
-          radar-visualizer-7.15.0.zip
+          files: | 
+            line-visualizer-7.15.0.zip
+            radar-visualizer-7.15.0.zip
