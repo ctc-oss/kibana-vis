@@ -1,6 +1,9 @@
 name: Vis Plugin Builder
 
-on: push
+on:
+  push:
+    tags:
+      - '*.*'
 
 jobs:
   build:
