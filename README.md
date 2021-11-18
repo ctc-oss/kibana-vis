@@ -1,4 +1,4 @@
-<h1 align="center"><pre>kibana-enhanced-vis</pre></h1>
+<h1 align="center"><pre>kibana-vis</pre></h1>
 <p align="center">Kibana visualization plugins & helper modules.</p>
 
 ### Graph Plugins
