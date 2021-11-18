@@ -3,7 +3,7 @@ name: Build & Release Plugins
 on:
   push:
     tags:
-      - '*.*'
+      - '*'
 
 jobs:
   build:
