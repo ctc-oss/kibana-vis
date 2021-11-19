@@ -15,9 +15,9 @@ jobs:
         run: yarn global add typescript
       - name: Module Dependencies & TypeScript Compilation
         run: |
-          cd data-builder/ && yarn && yarn tsc
-          cd ../drilldown/ && yarn && yarn tsc
-          cd ../legend && yarn && yarn tsc
+          cd data-builder/ && yarn && yarn tsc && rm -r node_modules/
+          cd ../drilldown/ && yarn && yarn tsc && rm -r node_modules/
+          cd ../legend/ && yarn && yarn tsc && rm -r node_modules/
       - name: Compile Plugins
         run: cd line-visualizer/ && yarn && cd ../radar-visualizer/ && yarn
       - name: Compress Plugins
