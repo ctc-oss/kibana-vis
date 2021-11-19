@@ -247,6 +247,11 @@ export const LineVisualizerOptions = ({
   useEffect(() => {
     setIntervalId(
       setInterval(() => {
+        if (window.location.href.indexOf('edit') < 0) {
+          clearInterval(intervalId);
+          return;
+        }
+
         const queryResult = queryMap.values().next();
         if (queryResult.value && queryResult.value.trim().length) {
           fetchQuery({ query: queryResult.value, key: '' }, (res) => {
