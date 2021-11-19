@@ -130,21 +130,35 @@ export interface QueryResult {
  * @param callback Function that is passed the response from said query (key and results)
  */
 export const fetchQuery = async (queryExp: any, callback: Function) => {
+  // Cannot work with the URL if it isn't a visualization edit/create URL
+  if (window.location.href.indexOf('edit') < 0 && window.location.href.indexOf('create') < 0) {
+    return;
+  }
+
   const kibanaAppURL = window.location.href.substring(0, window.location.href.indexOf('app'));
   const kibanaApiURL = `${kibanaAppURL}api/`;
-  const [visIDMatch, visualizationID] = window.location.href.match(/visualize#\/edit\/(.+?)\?_g=/);
+  const editMatch = window.location.href.match(/visualize#\/edit\/(.+?)\?_g=/);
+  const createMatch = window.location.href.match(
+    /visualize#\/create\?type=(?:.+?)&indexPattern=(.+?)&_g/
+  );
 
-  const indexPattern = await fetch(
-    kibanaApiURL + `saved_objects/visualization/${visualizationID}`,
-    {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }
-  )
-    .then((resp) => resp.json())
-    .then((data) => data.references[0].id);
+  const indexPattern =
+    editMatch == null
+      ? createMatch == null
+        ? null
+        : createMatch[1]
+      : await fetch(kibanaApiURL + `saved_objects/visualization/${editMatch[1]}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+          .then((resp) => resp.json())
+          .then((data) => data.references[0].id);
+
+  if (indexPattern == null) {
+    return;
+  }
 
   // query:(language:kuery,query:'...')
   const [fullMatch, gParams, filters, query] = window.location.href.match(

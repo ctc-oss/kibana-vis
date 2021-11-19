@@ -255,7 +255,7 @@ export const RadarVisualizerOptions = ({
   useEffect(() => {
     setIntervalId(
       setInterval(() => {
-        if (window.location.href.indexOf('edit') < 0) {
+        if (window.location.href.indexOf('edit') < 0 && window.location.href.indexOf('create') < 0) {
           clearInterval(intervalId);
           return;
         }
