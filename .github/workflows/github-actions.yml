@@ -11,9 +11,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Compile
+      - name: Install TypeScript
+        run: yarn global add typescript
+      - name: Module Dependencies & TypeScript Compilation
+        run: |
+          cd data-builder/ && yarn && yarn tsc
+          cd ../drilldown/ && yarn && yarn tsc
+          cd ../legend && yarn && yarn tsc
+      - name: Compile Plugins
         run: cd line-visualizer/ && yarn && cd ../radar-visualizer/ && yarn
-      - name: Compress
+      - name: Compress Plugins
         run: |
           mkdir kibana && cp -R line-visualizer/ kibana/ && zip -r line-visualizer-7.15.0.zip kibana/
           rm -r kibana/* && cp -R radar-visualizer/ kibana/ && zip -r radar-visualizer-7.15.0.zip kibana/
