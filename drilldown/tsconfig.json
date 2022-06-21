@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./",
+    "skipLibCheck": true,
     "lib": ["es2021", "dom"],
     "declaration": true,
     "jsx": "react-jsx",
