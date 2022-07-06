@@ -1,0 +1,25 @@
+FROM node:14.17.6
+
+# Choose which Kibana version you want
+# follow Git terminology to checkout tags: "tags/v<version>"
+ARG ELK_VERSION=7.15.0
+
+ENV KIBANA_VERSION v${ELK_VERSION?}
+
+COPY configure.sh /opt/
+RUN apt-get update && apt-get install -y git curl && \
+    chmod +x /opt/configure.sh && \
+    /opt/configure.sh && \
+    rm -rf rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp
+
+RUN git clone -b "$KIBANA_VERSION" --single-branch --depth 1 https://github.com/elastic/kibana.git && \
+    chown -R node /kibana /usr/local
+
+USER node
+WORKDIR /kibana
+EXPOSE 5601
+VOLUME /kibana/plugins
+
+RUN yarn kbn bootstrap
+ENTRYPOINT ["tail", "-f", "/dev/null"]
+# To run Kibana, you will need to exec into the container, and run `./start-dev.sh`

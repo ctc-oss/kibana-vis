@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# This will happen before kibana is cloned and built, so any operation that 
+# you need to run before that should live in this script.
+
+npm config set proxy $HTTP_PROXY
+npm config set https-proxy $HTTPS_PROXY
+yarn config set proxy $HTTP_PROXY
+yarn config set https-proxy $HTTPS_PROXY
