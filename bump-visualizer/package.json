@@ -1,7 +1,7 @@
 {
-  "name": "@kibana-enhanced-vis/line-visualizer",
-  "description": "A stacked line visualization plugin for Kibana, versions 7.15 and up",
-  "author": "Trae Yelovich <yelovict@ctc.com>",
+  "name": "@kibana-enhanced-vis/bump-visualizer",
+  "description": "A bumpchart visualization plugin for Kibana, versions 7.15 and up",
+  "author": "Jeremy Snyder <snyderj@ctc.com>",
   "version": "1.0.0",
   "scripts": {
     "build": "yarn plugin-helpers build",
@@ -13,13 +13,10 @@
     "@kibana-enhanced-vis/drilldown": "../drilldown/",
     "@kibana-enhanced-vis/legend": "../legend/",
     "@nivo/core": "0.71.0",
-    "@nivo/line": "0.71.0",
+    "@nivo/bump": "0.71.0",
     "@types/color-string": "^1.5.0",
     "color-string": "^1.6.0",
     "flat": "^5.0.2",
     "html-to-image": "^1.8.5"
-  },
-  "devDependencies": {
-    "typescript": "^4.7.3"
   }
 }

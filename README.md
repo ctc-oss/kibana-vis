@@ -5,6 +5,7 @@
 
 - **`radar-visualizer:`** Plot multivariate data using a radar chart.
 - **`line-visualizer:`** Plot data using a line chart - supports stacked lines.
+- **`bump-visualizer:`** Plot ranked data over time using a bump chart.
 
 ### Modules
 

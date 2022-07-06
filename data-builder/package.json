@@ -6,7 +6,10 @@
   "dependencies": {
     "lodash": "^4.17.21"
   },
+  "devDependencies": {
+    "typescript": "^4.7.3"
+  },
   "scripts": {
-    "tsc": "tsc --project tsconfig.json"
+    "build": "tsc --project tsconfig.json"
   }
 }
