@@ -12,13 +12,15 @@ RUN apt-get update && apt-get install -y git curl && \
     /opt/configure.sh && \
     rm -rf rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp
 
+EXPOSE 5601
+RUN mkdir /kibana/plugins && chown -R node /kibana/plugins
+VOLUME /kibana/plugins
+
 RUN git clone -b "$KIBANA_VERSION" --single-branch --depth 1 https://github.com/elastic/kibana.git && \
     chown -R node /kibana /usr/local
 
-USER node
 WORKDIR /kibana
-EXPOSE 5601
-VOLUME /kibana/plugins
+USER node
 
 RUN yarn kbn bootstrap
 ENTRYPOINT ["tail", "-f", "/dev/null"]
